@@ -4,7 +4,7 @@ class buildenv::kernel inherits buildenv::cpp {
     ensure => present,
     name   => $operatingsystem ? {
       /Debian|Ubuntu/ => "linux-headers-${kernelrelease}",
-      /RedHat|CentOS/ => "kernel-devel-${kernelrelease}",
+      /RedHat|Fedora|CentOS/ => "kernel-devel-${kernelrelease}",
     },
   }
 }

@@ -10,7 +10,7 @@ class buildenv::c {
     ensure => present,
     name   => $operatingsystem ? {
       /Debian|Ubuntu/ => "libc6-dev",
-      /RedHat|CentOS/ => "glibc-devel",
+      /RedHat|Fedora|CentOS/ => "glibc-devel",
     },
   }
 
