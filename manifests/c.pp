@@ -14,4 +14,12 @@ class buildenv::c {
     },
   }
 
+  package { "pkg-config":
+    ensure => present,
+    name   => $operatingsystem ? {
+      /Debian|Ubuntu|kFreeBSD/ => "pkg-config",
+      /RedHat|Fedora|CentOS/   => "pkgconfig",
+    },
+  }
+
 }
