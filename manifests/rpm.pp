@@ -1,6 +1,11 @@
 class buildenv::rpm {
 
-  package { "rpm-build":
+  $rpmbuild = $::operatingsystem ? {
+    /Debian|Ubuntu/ => 'rpm',
+    default         => 'rpm-build',
+  }
+
+  package { $rpmbuild:
     ensure => present,
   }
 
