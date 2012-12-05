@@ -1,11 +1,13 @@
 class buildenv::postgresql {
 
-  package {"postgresql-dev":
+  $package_name = $::operatingsystem ? {
+    /RedHat|Fedora|CentOS/ => 'postgresql-devel',
+    /Debian|Ubuntu/        => 'libpq-dev',
+  }
+
+  package {'postgresql-dev':
     ensure => present,
-    name => $operatingsystem ? {
-      /RedHat|Fedora|CentOS/ => "postgresql-devel",
-      /Debian|Ubuntu/ => "libpq-dev",
-    }
+    name   => $package_name,
   }
 
 }
