@@ -1,25 +1,37 @@
 class buildenv::c {
 
   package {
-    ["make", "gcc", "cpp", "autoconf",
-     "automake", "m4", "bison", "libtool"]:
+    [
+      'make',
+      'gcc',
+      'cpp',
+      'autoconf',
+      'automake',
+      'm4',
+      'bison',
+      'libtool',
+    ]:
     ensure => present,
   }
 
-  package { "libc-dev":
-    ensure => present,
-    name   => $operatingsystem ? {
-      /Debian|Ubuntu/ => "libc6-dev",
-      /RedHat|Fedora|CentOS/ => "glibc-devel",
-    },
+  $libc_dev_package_name = $::operatingsystem ? {
+    /Debian|Ubuntu/        => 'libc6-dev',
+    /RedHat|Fedora|CentOS/ => 'glibc-devel',
   }
 
-  package { "pkg-config":
+  package { 'libc-dev':
     ensure => present,
-    name   => $operatingsystem ? {
-      /Debian|Ubuntu|kFreeBSD/ => "pkg-config",
-      /RedHat|Fedora|CentOS/   => "pkgconfig",
-    },
+    name   => $libc_dev_package_name,
+  }
+
+  $pkg_config_package_name = $::operatingsystem ? {
+    /Debian|Ubuntu|kFreeBSD/ => 'pkg-config',
+    /RedHat|Fedora|CentOS/   => 'pkgconfig',
+  }
+
+  package { 'pkg-config':
+    ensure => present,
+    name   => $pkg_config_package_name,
   }
 
 }
