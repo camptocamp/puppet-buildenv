@@ -1,8 +1,10 @@
-class buildenv::kernel inherits buildenv::cpp {
+class buildenv::kernel {
 
-  $package_name = $::operatingsystem ? {
-    /Debian|Ubuntu/        => "linux-headers-${::kernelrelease}",
-    /RedHat|Fedora|CentOS/ => "kernel-devel-${::kernelrelease}",
+  include ::buildenv::cpp
+
+  $package_name = $::osfamily ? {
+    'Debian' => "linux-headers-${::kernelrelease}",
+    'RedHat' => "kernel-devel-${::kernelrelease}",
   }
 
   package { 'kernel-dev':
