@@ -19,7 +19,7 @@ with [puppet-lint](https://github.com/rodjek/puppet-lint) to follow the recommen
 
 ## License
 
-Copyright (c) 2012 <mailto:puppet@camptocamp.com> All rights reserved.
+Copyright (c) 2013 <mailto:puppet@camptocamp.com> All rights reserved.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
