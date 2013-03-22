@@ -14,9 +14,9 @@ class buildenv::c {
     ensure => present,
   }
 
-  $libc_dev_package_name = $::operatingsystem ? {
-    /Debian|Ubuntu/        => 'libc6-dev',
-    /RedHat|Fedora|CentOS/ => 'glibc-devel',
+  $libc_dev_package_name = $::osfamily ? {
+    'Debian' => 'libc6-dev',
+    'RedHat' => 'glibc-devel',
   }
 
   package { 'libc-dev':
@@ -24,9 +24,9 @@ class buildenv::c {
     name   => $libc_dev_package_name,
   }
 
-  $pkg_config_package_name = $::operatingsystem ? {
-    /Debian|Ubuntu|kFreeBSD/ => 'pkg-config',
-    /RedHat|Fedora|CentOS/   => 'pkgconfig',
+  $pkg_config_package_name = $::osfamily ? {
+    'Debian' => 'pkg-config',
+    'RedHat' => 'pkgconfig',
   }
 
   package { 'pkg-config':
