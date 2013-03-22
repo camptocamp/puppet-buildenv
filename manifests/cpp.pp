@@ -1,8 +1,10 @@
-class buildenv::cpp inherits buildenv::c {
+class buildenv::cpp {
 
-  $package_name = $::operatingsystem ? {
-    /RedHat|Fedora|CentOS/ => 'gcc-c++',
-    /Debian|Ubuntu/        => 'g++',
+  include ::buildenv::c
+
+  $package_name = $::osfamily ? {
+    'RedHat' => 'gcc-c++',
+    'Debian' => 'g++',
   }
 
   package { 'g++':
