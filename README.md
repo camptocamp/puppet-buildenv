@@ -1,34 +1,12 @@
-# Ruby Puppet Module
+# Buildenv Puppet Module
 
-This module manages Ruby and RubyGems on Debian/Redhat based systems.
+This module provides recipes to install build environments for various languages.
 
 ## Basic usage
 
-This module contains a set of classes that declare Ruby libraries (package or gem) 
-in the form of virtual resources. Wherever a library is needed you just have to 
-write the following lines:
+This module contains a set of classes that install packages for build environments.
 
-    include ruby::package::json
-    Package <| alias == 'ruby-json' |>
-
-If you prefer gem packages:
-
-    include ruby::gems
-    include ruby::gem::json
-    Package <| alias == 'ruby-json' |>
-
-Due to a bug (http://projects.puppetlabs.com/issues/4459) resource alias 
-is only usable for require. For example:
-
-    realize Package[ruby-json]
-
-doesn't work! This is why we use the "spaceship" (collection) operator.
-
-## Dependencies
-
-This module depends on:
- 
- * [puppet-stdlib](https://github.com/camptocamp/puppet-stdlib)
+Simply include these classes to install the packages.
 
 ## Contributing
 
