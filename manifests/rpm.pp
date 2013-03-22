@@ -1,11 +1,7 @@
-/*
-
-== Class: buildenv::rpm
-
-Setup a build environment for RPM building.
-
-*/
-
+# Class: buildenv::rpm
+#
+# Setup a build environment for RPM building.
+#
 class buildenv::rpm {
 
   $rpmbuild = $::osfamily ? {

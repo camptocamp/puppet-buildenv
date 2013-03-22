@@ -1,3 +1,7 @@
+# Class: buildenv::c
+#
+# Setup a build environment for C programs building.
+#
 class buildenv::c {
 
   package {

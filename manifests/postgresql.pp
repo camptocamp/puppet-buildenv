@@ -1,3 +1,7 @@
+# Class: buildenv::postgresql
+#
+# Setup a build environment for Postgresql building.
+#
 class buildenv::postgresql {
 
   $package_name = $::osfamily ? {

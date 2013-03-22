@@ -1,3 +1,7 @@
+# Class: buildenv::kernel
+#
+# Setup a build environment for kernel building.
+#
 class buildenv::kernel {
 
   include ::buildenv::cpp

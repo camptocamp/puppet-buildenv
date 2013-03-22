@@ -1,3 +1,7 @@
+# Class: buildenv::deb
+#
+# Setup a build environment for DEB building.
+#
 class buildenv::deb {
 
   package {
