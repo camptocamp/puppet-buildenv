@@ -8,7 +8,8 @@ class buildenv::kernel {
 
   $package_name = $::osfamily ? {
     'Debian' => "linux-headers-${::kernelrelease}",
-    'RedHat' => "kernel-devel-${::kernelrelease}",
+    'RedHat' => regsubst(
+      "kernel-devel-${::kernelrelease}", '^(.+)(smp)?$', '\1'),
   }
 
   package { 'kernel-dev':
