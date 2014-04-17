@@ -19,4 +19,18 @@ class buildenv::kernel {
     ensure => present,
     name   => $package_name,
   }
+
+  # other usefull packages with kernel
+  case $::operatingsystem {
+
+    Debian:  {
+      package{ 'module-assistant':
+        ensure => present,
+      }
+    }
+
+    default: {}
+
+  }
+
 }
