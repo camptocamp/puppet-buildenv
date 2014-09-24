@@ -25,5 +25,9 @@ class buildenv::apache {
         ensure => present,
       }
     }
+
+    default: {
+      fail "Unsupported Operating System Family ${::osfamily}."
+    }
   }
 }
