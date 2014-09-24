@@ -4,14 +4,26 @@
 #
 class buildenv::apache {
 
-  $package_name = $::osfamily ? {
-    'RedHat' => 'httpd-devel',
-    'Debian' => 'apache2-threaded-dev',
-  }
+  case $::osfamily {
 
-  package {'apache-dev':
-    ensure => present,
-    name   => $package_name,
-  }
+    'RedHat': {
+      package {'apache-dev':
+        ensure => present,
+        name   => 'httpd-devel',
+      }
+      package { ['apr-devel', 'apr-util-devel']:
+        ensure => present,
+      }
+    }
 
+    'Debian': {
+      package {'apache-dev':
+        ensure => present,
+        name   => 'apache2-threaded-dev',
+      }
+      package { ['libapr1-dev', 'libaprutil1-dev']:
+        ensure => present,
+      }
+    }
+  }
 }
