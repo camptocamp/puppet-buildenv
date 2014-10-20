@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/camptocamp/puppet-buildenv.png?branch=master)](https://travis-ci.org/camptocamp/puppet-buildenv)
-
 # Buildenv Puppet Module
+
+[![Puppet Forge](http://img.shields.io/puppetforge/v/camptocamp/buildenv.svg)](https://forge.puppetlabs.com/camptocamp/buildenv)
+[![Build Status](https://travis-ci.org/camptocamp/puppet-buildenv.png?branch=master)](https://travis-ci.org/camptocamp/puppet-buildenv)
 
 This module provides recipes to install build environments for various languages.
 
