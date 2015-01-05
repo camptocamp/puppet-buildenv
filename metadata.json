@@ -1,9 +1,9 @@
 {
   "name": "camptocamp-buildenv",
-  "version": "0.3.3",
-  "author": "DevOps Team / Camptocamp",
+  "version": "0.3.4",
+  "author": "Camptocamp",
   "summary": "Camptocamp Buildenv Module",
-  "license": "GNU GPLv3",
+  "license": "Apache-2.0",
   "source": "https://github.com/camptocamp/puppet-buildenv",
   "project_page": "https://github.com/camptocamp/puppet-buildenv",
   "issues_url": "https://github.com/camptocamp/puppet-buildenv/issues",
