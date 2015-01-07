@@ -23,7 +23,7 @@ class buildenv::kernel {
   # other usefull packages with kernel
   case $::operatingsystem {
 
-    Debian:  {
+    'Debian':  {
       package{ 'module-assistant':
         ensure => present,
       }
