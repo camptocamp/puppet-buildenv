@@ -14,7 +14,7 @@ class buildenv::deb {
       'dh-make',
       'dpkg-dev',
       'fakeroot',
-      'cdbs'
+      'cdbs',
     ]:
     ensure => present,
   }
