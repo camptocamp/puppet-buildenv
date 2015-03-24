@@ -1,3 +1,7 @@
+## 2015-03-24 - Release 0.3.6
+
+- Various spec improvements
+
 ## 2015-01-07 - Release 0.3.5
 
 - Fix unquoted strings in cases
