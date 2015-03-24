@@ -1,7 +1,10 @@
 # Buildenv Puppet Module
 
-[![Puppet Forge](http://img.shields.io/puppetforge/v/camptocamp/buildenv.svg)](https://forge.puppetlabs.com/camptocamp/buildenv)
-[![Build Status](https://travis-ci.org/camptocamp/puppet-buildenv.png?branch=master)](https://travis-ci.org/camptocamp/puppet-buildenv)
+[![Puppet Forge Version](http://img.shields.io/puppetforge/v/camptocamp/buildenv.svg)](https://forge.puppetlabs.com/camptocamp/buildenv)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/camptocamp/buildenv.svg)](https://forge.puppetlabs.com/camptocamp/buildenv)
+[![Build Status](https://img.shields.io/travis/camptocamp/puppet-buildenv/master.svg)](https://travis-ci.org/camptocamp/puppet-buildenv)
+[![Gemnasium](https://img.shields.io/gemnasium/camptocamp/puppet-buildenv.svg)](https://gemnasium.com/camptocamp/puppet-buildenv)
+[![By Camptocamp](https://img.shields.io/badge/by-camptocamp-fb7047.svg)](http://www.camptocamp.com)
 
 This module provides recipes to install build environments for various languages.
 
