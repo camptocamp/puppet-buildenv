@@ -4,6 +4,8 @@
 #
 class buildenv::postgresql {
 
+  warning 'Deprecated, please use postgresql::lib::devel'
+
   $package_name = $::osfamily ? {
     'RedHat' => 'postgresql-devel',
     'Debian' => 'libpq-dev',
