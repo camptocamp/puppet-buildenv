@@ -1,3 +1,7 @@
+## 2015-04-29 - Release 0.3.9
+
+Deprecate buildenv::postgresql
+
 ## 2015-04-27 - Release 0.3.8
 
 Add nodeset ubuntu-12.04-x86_64-openstack
