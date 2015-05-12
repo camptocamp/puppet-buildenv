@@ -1,3 +1,7 @@
+## 2015-05-12 - Release 0.3.10
+
+Don't pin beaker
+
 ## 2015-04-29 - Release 0.3.9
 
 Deprecate buildenv::postgresql
