@@ -1,3 +1,7 @@
+## 2015-05-25 - Release 0.3.12
+
+Don't allow failure on Puppet 4
+
 ## 2015-05-13 - Release 0.3.11
 
 Add puppet-lint-file_source_rights-check gem
